@@ -3,7 +3,7 @@ package avaj.packages;
 
 public class AircraftFactory {
 
-	public Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {
+	public static Flyable newAircraft(String type, String name, int longitude, int latitude, int height) {
 		
 		WeatherTower 	weatherTower = new WeatherTower();
 		Coordinates coordinates = new Coordinates(latitude, longitude, height);

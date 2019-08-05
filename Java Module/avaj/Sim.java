@@ -6,12 +6,12 @@ import avaj.packages.*;
 
 public class		Sim {
 
-	public static	PrintWriter			write;
-	public static	Tower				tower = new Tower();
-	public static	WeatherTower		weatherTower = new WeatherTower();
-	public static	AircraftFactory		aircraftFactory = new AircraftFactory();
-	public			WeatherProvider 	weatherProvider = WeatherProvider.getProvider();
-	public static 	int 				cycles = 25;
+	// public static	PrintWriter			write;
+	// public static	Tower 				tower = new Tower();
+	// public static	WeatherTower		weatherTower = new WeatherTower();
+	// public static	AircraftFactory		aircraftFactory = new AircraftFactory();
+	// public			WeatherProvider 	weatherProvider = WeatherProvider.getProvider();
+	// public static 	int 				cycles = 25;
 
 	public static void	main(String[] args){
 		
@@ -34,6 +34,7 @@ public class		Sim {
 			return;
 		}
 		ArrayList<Flyable> flyables = new ArrayList<>();
+		WeatherTower	weatherTower = new WeatherTower();
 
 		try {
 			FileReader			stream = new FileReader(fname);
@@ -54,7 +55,7 @@ public class		Sim {
 
 				seperate = WhileLine.split(" ");
 				try {
-					flyables.add(aircraftFactory.newAircraft(seperate[0], seperate[1],
+					flyables.add(AircraftFactory.newAircraft(seperate[0], seperate[1],
 					Integer.parseInt(seperate[2]),
 					Integer.parseInt(seperate[3]),
 					Integer.parseInt(seperate[4])));
