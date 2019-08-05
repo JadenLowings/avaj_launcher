@@ -1,5 +1,5 @@
-package packages;
-import packages.*;
+package avaj.packages;
+// import avaj.packages.*;
 
 public class AircraftFactory {
 

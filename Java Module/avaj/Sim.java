@@ -1,7 +1,7 @@
 package avaj;
 import java.io.*;
 import java.util.*;
-import packages.*;
+import avaj.packages.*;
 
 
 public class		Sim {
@@ -15,9 +15,9 @@ public class		Sim {
 
 	public static void	main(String[] args){
 		
-		int lineNum = 1;
+		// int lineNum = 1;
 		String fname = args[0];
-		File simOutputFile = new File("simulation.txt");
+		// File simOutputFile = new File("simulation.txt");
 
 		if (args.length <= 0) {
 			System.out.println("No File Selected");
@@ -29,8 +29,8 @@ public class		Sim {
         try {
 			OutputWriter.OutputFile("simulation.txt");
 		}
-		catch (FileNotFoundException ErrorMsg){
-			System.out.println("Error: " + ErrorMsg.getMessage());
+		catch (IOException ErrorMsg){
+			System.out.println("Error: " + ErrorMsg);
 			return;
 		}
 		ArrayList<Flyable> flyables = new ArrayList<>();
@@ -41,7 +41,7 @@ public class		Sim {
 			String 				line = reader.readLine();
 			String				WhileLine;
 			String[] 			seperate;
-			int					sim_Count;
+			int					sim_Count = 0;
 			
 			try {
 				sim_Count = Integer.parseInt(line);
@@ -70,6 +70,7 @@ public class		Sim {
 			for (int i = 0; i < sim_Count; i++) {
 				weatherTower.changeWeather();
 			}
+			reader.close();
 		}
 		catch(IOException ErrorMain){
 			System.out.println("Error: " + ErrorMain);

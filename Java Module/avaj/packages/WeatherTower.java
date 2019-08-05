@@ -1,4 +1,4 @@
-package packages;
+package avaj.packages;
 
 public class WeatherTower extends Tower {
 

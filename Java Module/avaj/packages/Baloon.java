@@ -1,7 +1,7 @@
-package packages;
+package avaj.packages;
 import java.util.*;
 import avaj.*;
-import packages.*;
+// import avaj.packages.*;
 
 // public class Balloon extends Aircraft implements Flyable {
 

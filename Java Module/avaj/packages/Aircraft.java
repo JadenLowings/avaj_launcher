@@ -1,10 +1,11 @@
-package packages;
+package avaj.packages;
 
 
 public class		Aircraft {
 
 	protected 	long		ID;
 	protected 	String		name;
+	protected	String		type;
 	protected 	Coordinates	coordinates;
 	private 	long		idCounter = 0;
 

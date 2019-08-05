@@ -42,10 +42,10 @@
 // 	}
 // }
 
-package packages;
+package avaj.packages;
 import java.util.HashMap;
 
-import packages.*;
+// import avaj.packages.*;
 
 public class Helicopter extends Aircraft implements Flyable {
 

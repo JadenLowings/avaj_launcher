@@ -1,4 +1,4 @@
-package packages;
+package avaj.packages;
 
 public interface Flyable {
 	void	updateConditions();

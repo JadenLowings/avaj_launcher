@@ -1,8 +1,8 @@
-package packages;
+package avaj.packages;
 
 public class		WeatherProvider {
-	private static int n;
-	private static int a;
+	// private static int n;
+	// private static int a;
 	private String[] Weather = new String[]{"Sun", "Snow", "Rain", "Fog"};
 	private static WeatherProvider weatherProvider = new WeatherProvider();
 	

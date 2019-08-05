@@ -1,23 +1,23 @@
-package packages;
+package avaj.packages;
 import java.io.*;
-import packages.*;
+// import avaj.packages.*;
 
 public class	OutputWriter{
 	
-	private static	Writer write = null;
+	private static	Writer writer = null;
 
-	public static void	OutputFile(String Filename) {
-		if (OutputWriter.write != null) {
+	public static void	OutputFile(String Filename) throws IOException {
+		if (OutputWriter.writer != null) {
 			
-			OutputWriter.write.close();
-			OutputWriter.write = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(Filename)));
+			OutputWriter.writer.close();
+			OutputWriter.writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(Filename)));
 		}
 	}
 
 	public static void	log(String messages) {
 		try {
-			OutputWriter.write(messages + "\n");
-			write.flush();
+			OutputWriter.writer.write(messages + "\n");
+			writer.flush();
 		}
 		catch (IOException Error){
 			System.out.println(Error + "Error info.");
